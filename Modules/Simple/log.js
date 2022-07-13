@@ -53,7 +53,15 @@ let calcul = {
     },
 
     solstice : function(){
-        
+        let interval = 0;
+        if (dateDuJour > dateSolsticeJuin){
+            interval += (dateSolsticeDecembre - dateDuJour);
+        }
+        else{
+            interval += (dateDuJour - dateSolsticeJuin);
+        }
+        let nbJours = Math.floor(interval / (1000 * 60 * 60 * 24));
+        console.log(`Il reste ${nbJours} avant le prochain solstice.`);
     }
     
 }
