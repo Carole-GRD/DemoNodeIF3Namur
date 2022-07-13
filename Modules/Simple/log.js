@@ -1,13 +1,21 @@
+// convertir en jours
+let nbJours;
+let interval;
+function convertir(interval){
+    nbJours = Math.floor(interval / (1000 * 60 * 60 * 24));
+}
+
+// --------------------------------------------------------------------
+
 // date actuelle
 let dateDuJour = new Date();
 
 // --------------------------------------------------------------------
 
-// annee en cours
+// obtenir l'année en cours
 function annee(){
     return dateDuJour.getFullYear();
 } 
-console.log(annee());
 
 // --------------------------------------------------------------------
 
@@ -36,14 +44,14 @@ let dateSolsticeDecembre = new Date(`December 21, ${annee()} 00:00:00`);
 let calcul = {
     noel : function(){
         let interval = (dateNoel - dateDuJour);
-        let nbJours = Math.floor(interval / (1000 * 60 * 60 * 24));
+        convertir(interval);
         console.log(`Il reste ${nbJours} jours avant Noël.`);
 
     },
 
     anniversaire : function(){
         let interval = (dateAnniveraire - dateDuJour);
-        let nbJours = Math.floor(interval / (1000 * 60 * 60 * 24));
+        convertir(interval);
         if(nbJours < 0){
             let reponse = 365 + nbJours;
             console.log(`Il reste ${reponse} jours avant mon anniversaire.`);
@@ -55,7 +63,7 @@ let calcul = {
 
     vacances : function(){
         let interval = (dateVacances - dateDuJour);
-        let nbJours = Math.floor(interval / (1000 * 60 * 60 * 24));
+        convertir(interval);
         console.log(`Il reste ${nbJours} jours avant les vacances.`);
 
     },
@@ -68,7 +76,7 @@ let calcul = {
         else{
             interval += (dateDuJour - dateSolsticeJuin);
         }
-        let nbJours = Math.floor(interval / (1000 * 60 * 60 * 24));
+        convertir(interval);
         console.log(`Il reste ${nbJours} avant le prochain solstice.`);
     }
     
