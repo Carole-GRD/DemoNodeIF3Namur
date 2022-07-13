@@ -1,0 +1,20 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "demo node",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Carole-GRD/DemoNodeIF3Namur.git"
+  },
+  "author": "Carole",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Carole-GRD/DemoNodeIF3Namur/issues"
+  },
+  "homepage": "https://github.com/Carole-GRD/DemoNodeIF3Namur#readme"
+}
