@@ -3,24 +3,32 @@ let dateDuJour = new Date();
 
 // --------------------------------------------------------------------
 
+// annee en cours
+function annee(){
+    return dateDuJour.getFullYear();
+} 
+console.log(annee());
+
+// --------------------------------------------------------------------
+
 // Noël
-let dateNoel = new Date(`December 25, 2022 00:00:00`);
+let dateNoel = new Date(`December 25, ${annee()} 00:00:00`);
 
 // --------------------------------------------------------------------
 
 // anniversaire
-let dateAnniveraire = new Date('March 16, 2022 00:03:00');
+let dateAnniveraire = new Date(`March 16, ${annee()} 00:00:00`);
 
 // --------------------------------------------------------------------
 
 // vacances
-let dateVacances = new Date('October 01, 2022 00:00:00');
+let dateVacances = new Date(`October 01, ${annee()} 00:00:0`);
 
 // --------------------------------------------------------------------
 
 // solstice
-let dateSolsticeJuin = new Date('June 21, 2022 00:00:00');
-let dateSolsticeDecembre = new Date('December 21, 2022 00:00:00');
+let dateSolsticeJuin = new Date(`June 21, ${annee()} 00:00:00`);
+let dateSolsticeDecembre = new Date(`December 21, ${annee()} 00:00:00`);
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
