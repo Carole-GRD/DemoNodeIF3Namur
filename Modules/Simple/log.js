@@ -85,18 +85,16 @@ let calcul = {
     },
 
     vendredi_13 : function(){
-        interval = 0;
-
-        for (let i = 0; i < 1000; i++){
-            interval++;
-            
+        
+        for (let i = 1; i < 1000; i++){
+        
             dateDuJour.setDate(dateDuJour.getDate() + 1);
-
+    
             let jourDeLaSemaine = dateDuJour.getDay();
             let jourDuMois = dateDuJour.getDate();
-
+    
             if (jourDeLaSemaine == 5 && jourDuMois == "13"){
-                nbJours = interval;
+                nbJours = i;
                 break;
             }
         }  
