@@ -81,11 +81,11 @@ let calcul = {
         interval += (dateSolsticeJuin - dateDuJour);
     }
     convertir(interval);
-    console.log(`Il reste ${nbJours} avant le prochain solstice.`);
+    console.log(`Il reste ${nbJours} jours avant le prochain solstice.`);
     },
 
     vendredi_13 : function(){
-        
+
         for (let i = 1; i < 1000; i++){
         
             dateDuJour.setDate(dateDuJour.getDate() + 1);
@@ -98,7 +98,7 @@ let calcul = {
                 break;
             }
         }  
-        console.log(`Il reste ${nbJours} avant le prochain vendredi 13.`);
+        console.log(`Il reste ${nbJours} jours avant le prochain vendredi 13.`);
     }
     
 }
