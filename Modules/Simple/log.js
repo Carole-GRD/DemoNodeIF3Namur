@@ -70,14 +70,18 @@ let calcul = {
 
     solstice : function(){
         let interval = 0;
-        if (dateDuJour > dateSolsticeJuin){
-            interval += (dateSolsticeDecembre - dateDuJour);
-        }
-        else{
-            interval += (dateDuJour - dateSolsticeJuin);
-        }
-        convertir(interval);
-        console.log(`Il reste ${nbJours} avant le prochain solstice.`);
+    if (dateDuJour < dateSolsticeJuin){
+        interval += (dateSolsticeJuin - dateDuJour);
+    }
+    if (dateDuJour > dateSolsticeJuin && dateDuJour < dateSolsticeDecembre){
+        interval += (dateSolsticeDecembre - dateDuJour);
+    }
+    if (dateDuJour > dateSolsticeDecembre){
+        dateSolsticeJuin = new Date(`June 21, ${annee() + 1} 00:00:00`);
+        interval += (dateSolsticeJuin - dateDuJour);
+    }
+    convertir(interval);
+    console.log(`Il reste ${nbJours} avant le prochain solstice.`);
     }
     
 }
