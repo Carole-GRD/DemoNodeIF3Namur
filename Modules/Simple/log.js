@@ -82,6 +82,25 @@ let calcul = {
     }
     convertir(interval);
     console.log(`Il reste ${nbJours} avant le prochain solstice.`);
+    },
+
+    vendredi_13 : function(){
+        interval = 0;
+
+        for (let i = 0; i < 1000; i++){
+            interval++;
+            
+            dateDuJour.setDate(dateDuJour.getDate() + 1);
+
+            let jourDeLaSemaine = dateDuJour.getDay();
+            let jourDuMois = dateDuJour.getDate();
+
+            if (jourDeLaSemaine == 5 && jourDuMois == "13"){
+                nbJours = interval;
+                break;
+            }
+        }  
+        console.log(`Il reste ${nbJours} avant le prochain vendredi 13.`);
     }
     
 }

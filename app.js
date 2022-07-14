@@ -4,3 +4,5 @@ calculModule.noel();
 calculModule.anniversaire();
 calculModule.vacances();
 calculModule.solstice();
+calculModule.vendredi_13();
+
