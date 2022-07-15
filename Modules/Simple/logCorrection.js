@@ -16,7 +16,12 @@ const today = new Date();
 // Dans le cas où la date est déjà passée, on ajoute un an pour obtenir la date correpondant à l'évènement de l'année suivante
 function getNextDate(day, month){
     let currentYear = today.getFullYear();
+    
+    // on retire 1 pour obtenir l'index du mois
+    // en effet, si on entre le 10/01 pour le 10 janvier 
+    // MAIS le mois de janvier a pour index 0 
     let dateMonth = month - 1;
+    
     // On vérifie si nous sommes le même mois que la date renseignée et un ou plusieurs jours après
     // Ou que nous avons dépassé le mois renseigné
     if ((today.getMonth() === dateMonth && today.getDate() > day) || today.getMonth() > dateMonth){
