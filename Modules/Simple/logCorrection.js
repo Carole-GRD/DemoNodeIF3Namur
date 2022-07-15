@@ -18,8 +18,8 @@ function getNextDate(day, month){
     let currentYear = today.getFullYear();
     
     // on retire 1 pour obtenir l'index du mois
-    // en effet, si on entre le 10/01 pour le 10 janvier 
-    // MAIS le mois de janvier a pour index 0 
+    // -> on entre le 10/01 pour le 10 janvier 
+    // -> MAIS le mois de janvier a pour index 0 
     let dateMonth = month - 1;
     
     // On vérifie si nous sommes le même mois que la date renseignée et un ou plusieurs jours après
@@ -32,7 +32,7 @@ function getNextDate(day, month){
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-// Fonction qui calcul le nombre de jour avant l'évènement
+// Fonction qui calcule le nombre de jours avant l'évènement
 function getDiffDays(targetDate){
     // On obtient la différence en millisecondes entre nos deux dates
     const diff = targetDate.getTime() - today.getTime();
@@ -97,12 +97,13 @@ let eventDate = {
         // on stocke la date du 13 du mois (en cours ou suivant) de l'année (en cours) dans une variable 
         const nextFriday = new Date(today.getFullYear(), month, 13);
         
-        // Tant que le 13 du mois n'est pas un vendredi (vendredi a pour index 5), on passe au mois suivant pour vérifier si le 13 est un vendredi
+        // Tant que le 13 du mois n'est pas un vendredi, on passe au mois suivant pour vérifier si le 13 est un vendredi
+        //  -> vendredi a pour index 5
         while(nextFriday.getDay() !== 5){
             nextFriday.setMonth(nextFriday.getMonth() + 1);
         }
         
-        // lorsqu'on a la date du prochain vendredi 13, on calcul le nombre de jours avant cette date
+        // lorsqu'on a la date du prochain vendredi 13, on calcule le nombre de jours avant cette date
         const diffDays = getDiffDays(nextFriday);
         console.log(`Il reste ${diffDays} avant le prochain vendredi 13`);
     }
