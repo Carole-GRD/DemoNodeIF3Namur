@@ -6,10 +6,10 @@
 // calculModule.solstice();
 // calculModule.vendredi_13();
 
-const eventDate = require('./Modules/Simple/logCorrection');
+const eventDays = require('./Modules/Simple/logCorrection');
 
-eventDate.fromChristmas();
-eventDate.fromBirthday();
-eventDate.fromVacation();
-eventDate.solstice();
-eventDate.fromFriday13();
+eventDays.fromChristmas();
+eventDays.fromBirthday();
+eventDays.fromVacation();
+eventDays.solstice();
+eventDays.fromFriday13();

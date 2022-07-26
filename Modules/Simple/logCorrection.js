@@ -46,7 +46,7 @@ function getDiffDays(targetDate){
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-let eventDate = {
+let eventDays = {
     fromChristmas : function(){
         const christmas = getNextDate(25, 12);
         const diffDays = getDiffDays(christmas);
@@ -110,6 +110,6 @@ let eventDate = {
 
 }
 
-module.exports = eventDate;
+module.exports = eventDays;
 
 
